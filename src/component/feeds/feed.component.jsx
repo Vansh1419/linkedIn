@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { colRef } from "../../utils/firebase";
-import FlipMove from "react-flip-move";
 import "./feed.style.scss";
 import {
   getDocs,
@@ -45,9 +44,7 @@ const FeedComponent = () => {
       photoUrl: "",
       timestamp: serverTimestamp(),
     });
-    console.log("hello");
     setInput("");
-    console.log(input);
   };
   return (
     <div className="feed">
@@ -87,7 +84,6 @@ const FeedComponent = () => {
         </div>
       </div>
       {/* post */}
-      <FlipMove>
         {posts.map(({ id, data: { name, description, message, photoUrl } }) => (
           <PostComponent
             key={id}
@@ -97,7 +93,6 @@ const FeedComponent = () => {
             photoUrl={photoUrl}
           />
         ))}
-      </FlipMove>
     </div>
   );
 };

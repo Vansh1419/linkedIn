@@ -13,7 +13,6 @@ import { selectUser } from "../../../features/userSlice";
 const PostComponent = forwardRef(
   ({ name, description, message, photoUrl }, ref) => {
     const user = useSelector(selectUser);
-    console.log(user);
     return (
       <div className="post" ref={ref}>
         <div className="post__header">

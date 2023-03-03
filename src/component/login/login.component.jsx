@@ -51,7 +51,6 @@ const LoginComponent = () => {
               photoUrl: userAuth.user.photoUrl,
             })
           );
-          console.log(userAuth.user.photoURL);
         });
       })
       .catch((error) => {
